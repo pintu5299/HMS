@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_name: MyString
+  age: 1
+  gender: MyString
+  guardians_name: MyString
+  contact: 1
+  email: MyString
+  address: MyString
+  doctor_name: MyString
+  consultancy_fee: 1
+  doctor_id: 1
+  speciality: MyString
+  appointment_date: 2023-07-19
+  appointment_time: 2023-07-19 11:23:47
+
+two:
+  patient_name: MyString
+  age: 1
+  gender: MyString
+  guardians_name: MyString
+  contact: 1
+  email: MyString
+  address: MyString
+  doctor_name: MyString
+  consultancy_fee: 1
+  doctor_id: 1
+  speciality: MyString
+  appointment_date: 2023-07-19
+  appointment_time: 2023-07-19 11:23:47

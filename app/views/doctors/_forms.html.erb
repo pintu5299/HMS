@@ -1,0 +1,44 @@
+<div class="container">
+<%= bootstrap_form_with model: doctor do |form| %>
+  <div class="field form-group">
+    <%= form.text_field :name, class:"form-control", placeholder: "Doctor_Name" %> 
+  </div>
+  <div class="field form-group">   
+    <%= form.text_field :speciality, class:"form-control", placeholder: "Speciality" %>
+  </div>
+  <div class="field form-group">   
+    <%= form.text_field :mobile, class:"form-control", placeholder: "Mobile" %>
+  </div>
+  <div class="field form-group">
+    <%= form.text_field :experience, class:"form-control", placeholder: "experience" %>
+  </div>
+  <div class="field form-group">   
+    <%= form.text_field :registration_number, class:"form-control", placeholder: "registration number" %>
+  </div>
+  <div class="field form-group">
+    <%= form.text_field :address, class:"form-control", placeholder: "Address" %>
+  </div>
+  <div class="field form-group">
+    <%= form.text_field :language, class:"form-control", placeholder: "Language" %>
+  </div>
+  <div class="field form-group">
+    <%= form.text_field :consultancy_fee, class:"form-control", placeholder: "Consultancy_Fees" %>
+  </div>
+  <div class="field form-group">
+    <%= form.text_field :available, class:"form-control", placeholder: "Available" %>
+  </div>
+  <div class="field form-group">
+    <%= form.text_field :status, class:"form-control", placeholder: "Status" %>
+  </div>
+  <div class="field form-group">
+    <%= form.text_field :user_id, class:"form-control", placeholder: "user_id" ,value: current_user.id %>
+  </div>
+  <div class=" field form-group">
+       <%= form.file_field :image %>
+     </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+  <% end %>  
+</div> 

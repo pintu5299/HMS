@@ -1,0 +1,28 @@
+
+  <div class="col-lg-12">
+  <div class="card rounded-0 mt-5 mb-5">
+    <div class="card-body">
+      <h2 class="text-center">Doctor Details</h2>
+    <div class="row">
+    <div class="col-lg-6">
+      <% if @doctor.image.attached? %>
+      <%= image_tag @doctor.image,class:"image11"%>
+        <% end %>
+      <p class="lead "><strong style="color:blue;">name:-</strong> <%=@doctor.name%></p>
+      <p class="lead"><strong style="color:blue;">speciality:-</strong> <%= @doctor.speciality%></p>
+      <p class="lead "><strong style="color:blue;">mobile:-</strong> <%= @doctor.mobile%></p>
+      <p class="lead"><strong style="color:blue;">address:-</strong> <%= @doctor.address %></p>
+      <p class="lead"><strong style="color:blue;">experience:-</strong> <%= @doctor.experience %></p>
+       <p class="lead"><strong style="color:blue;">registration_number:-</strong> <%= @doctor.registration_number%></p>
+      <p class="lead"><strong style="color:blue;">language:-</strong> <%= @doctor.language %></p>
+      <p class="lead"><strong style="color:blue;">consultancy_fee:-</strong> <%= @doctor.consultancy_fee%></p>
+      <p class="lead"><strong style="color:blue;">user_id:-</strong> <%= @doctor.user_id%></p>
+      <p class="lead"><strong style="color:blue;">available:-</strong> <%= @doctor.available%></p>
+   </div>
+    </div>
+    <%= link_to 'Back to Doctor', doctors_path, class:"btn btn-primary"%>
+    <%= link_to 'Edit Doctor Details', edit_doctor_path, class:"btn btn-primary"%>
+   
+  </div>
+    </div>
+     </div>

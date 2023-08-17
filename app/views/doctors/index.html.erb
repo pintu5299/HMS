@@ -1,0 +1,55 @@
+<div class="col-lg-12">
+<div class="card rounded-0 mt-5 mb-5">
+  <div class="card-body">
+    <h2 class="text-center" style="color: blue;">Doctor's Name</h2>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    
+<% @doctors.each do |doctor|%>  
+  <div class="col-5 card m-4 main-col">
+    <div class="col-6">
+      <div class="img-placeholder">
+         <% if doctor.image.attached? %>
+          <%= image_tag doctor.image%>
+        <% end %>
+      </div>
+      <br>
+      <div>
+        <%= link_to "Book Appointment", new_appointment_path(doctor_id: doctor.id, doctor_name: doctor.name, consultancy_fee: doctor.consultancy_fee, user_id:current_user.id), class: "btn btn-primary btn-lg mb-4 rounded-0" %>
+        
+        <%= link_to "See appointment", appointments_path(doctor_id: doctor.id), class:"btn btn-primary" %>  
+      </br>
+      <br>
+         <% if user_signed_in? && can?(:update, @doctor)%>
+         <%= link_to "Edit", edit_doctor_path(doctor), class:"btn btn-primary"%>
+         
+        <% else %>
+         <% end %>
+
+        <% if user_signed_in? && can?(:destroy, @doctor)%>
+          <%= link_to "Delete", doctor ,data:{turbo_method: :delete,turbo_confirm: :"Are you sure to delete this Doctor?"}, class:"btn btn-danger" %>
+        <% end %>
+      </div>
+        <br>
+    </div>
+    <div class="col-6 col1">
+      <h3><%#= doctor.email %></h3>
+      <p><i class="fa-solid fa-user"></i><%=doctor.name%></p>
+      <p><i class="fa-solid fa-user"></i><%= doctor.speciality %></p>
+      <p><i class="fa-solid fa-user"></i><%= doctor.mobile %></p>
+      <p><i class="fa-solid fa-user"></i><%= doctor.experience %></p>
+      <p><i class="fa-solid fa-user"></i><%= doctor.registration_number %></p>
+      <p><i class="fa-solid fa-user"></i><%= doctor.address %></p>
+      <p><i class="fa-solid fa-user"></i><%= doctor.language %></p>
+      <p><i class="fa-solid fa-user"></i><%= doctor.consultancy_fee %></p>
+      <p><i class="fa-solid fa-user"></i><%= doctor.available %></p>
+      <p><i class="fa-solid fa-user"></i><%= doctor.status %></p>
+      <p><i class="fa-solid fa-user"></i><%= doctor.user_id %></p>
+    </div>
+  </div>
+<% end %> 
+</div>
+</div>
+

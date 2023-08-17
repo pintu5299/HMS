@@ -1,0 +1,18 @@
+<div class="col-lg-12">
+  <div class="card rounded-0 mt-5 mb-5">
+    <div class="card-body">
+      <h2 class="text-center">Patient details</h2>
+    <div class="row">
+    <div class="col-lg-6">
+      <p class="lead "><strong style="color:blue;">patient Id:-</strong> <%= @patient.id %></p>
+      <p class="lead "><strong style="color:blue;">name:-</strong> <%= @patient.name %></p>
+      <p class="lead"><strong style="color:blue;">age:-</strong> <%= @patient.age%></p>
+      <p class="lead"><strong style="color:blue;">guardian_name:-</strong> <%= @patient.guardian_name%></p>
+      <p class="lead"><strong style="color:blue;">mobile:-</strong> <%= @patient.mobile%></p>
+      <p class="lead"><strong style="color:blue;">address:-</strong> <%= @patient.address %></p>
+   </div>
+    </div>
+    <%= link_to 'see Doctor', doctors_path, class:"btn btn-primary"%>
+  </div>
+    </div>
+     </div>
